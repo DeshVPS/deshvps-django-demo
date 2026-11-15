@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Cha Ghor notes</title>
+<style>body{font-family:system-ui;max-width:40rem;margin:4rem auto;padding:0 1rem;color:#1f2937}</style></head>
+<body>
+<h1>Cha Ghor notes, on Django</h1>
+<p>Database: <strong id="engine">{{ engine }}</strong></p>
+<form method="post">{% csrf_token %}<input name="text" placeholder="Today's special…" required> <button>Save</button></form>
+<ul id="notes">{% for n in notes %}<li>{{ n.text }}</li>{% empty %}<li>No notes yet.</li>{% endfor %}</ul>
+</body></html>
